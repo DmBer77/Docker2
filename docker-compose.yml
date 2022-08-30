@@ -1,7 +1,7 @@
 version: '3.7'
 services:
-  node-app:
+  openjdk:
     build: .
-    image: node-app:1.0
+    image: db-api-for-docker-app:1.0
     ports:
       - '9999:9999'
