@@ -1,5 +1,6 @@
 FROM openjdk:8-slim
-WORKDIR db-api-for-docker.jar
+ARG JAR_FILE=target/db-api-for-docker.jar
+WORKDIR opt/app
 COPY . .
-CMD ["java -jar", "db-api-for-docker.jar"]
+ENTRYPOINT ["java","-jar","db-api-for-docker.jar"]
 EXPOSE 9999
